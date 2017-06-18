@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    #box {
+        margin: 0 auto;
+        width: 200px;
+        height: 200px;
+        background-color: hsla(23, 50%, 34%, 0.5);
+        /*background-color: rgba(0~255, 0~255, 0~255, 0~1);*/
+        /*background-color: hsla(0~360, 100%, 100%, 0~1);*/
+        /*background-color: red;*/
+        /*opacity: 0.5;会继承*/
+    }
+    #mark {
+        width: 50px;
+        height: 50px;
+        background-color: yellow;
+        /*background-color: transparent;透明*/
+        
+    }
+    #con {
+        font: 800 18px/24px "SimSun";
+        text-shadow: 2px 2px 5px #000;
+    }
+    #txt {
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+        /*三个属性结合使用...*/
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        /*white-space: nowrap;强制不换行*/
+        /*word-break: break-all;*/
+        /*word-wrap: break-word;允许在长单词之间换行*/
+        
+    }
+    #tet {
+        margin: 100px;
+        width: 100px;
+        height: 100px;
+        border: 50px solid red;
+        /*当边框的宽度大于盒子的宽度时候，外面的边框起作用，当盒子的宽度大于边框的宽度时候两边都起作用*/
+        border-radius: 100px;
+    }
+    
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div id="mark"></div>
+    </div>
+    <div id="tet"></div>
+    <p id="con">通过创建的方式，列入HTML，有脚本</p>
+    <div id="txt">https://hao.360.cn/?src=lm&ls=n2537f7e896</div>
+    <script type="text/javascript">
+    //通过创建的方式，列入HTML，有脚本
+    //first-child
+    //last-child
+    //only-child
+    //nth-child
+    document.createElement("header");
+    
+    </script>
+</body>
+</html>

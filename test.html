@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>border-radius画图</title>
+    <style type="text/css">
+        div {
+            margin: 20px 20px;
+            float: left;
+        }
+
+        #box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border-radius: 50%;
+        }
+
+        #box2 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border-radius: 0 50px 50px 50px;
+        }
+
+        #box3 {
+            width: 100px;
+            height: 50px;
+            background-color: red;
+            /*border-radius: 100px / 50px;*/
+            /*上下两个是等价的*/
+            border-radius: 100px 100px 100px 100px / 50px 50px 50px 50px;
+            /*椭圆画法是：四个角的横轴/四个角的纵轴*/
+        }
+
+        #box4 {
+            width: 100px;
+            height: 50px;
+            background-color: red;
+            border-radius: 50px 50px 0 0;
+        }
+
+        #box5 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border-radius: 50% 50% 0 0;
+        }
+
+        #box6 {
+            width: 100px;
+            height: 100px;
+            border: 50px solid red;
+            border-radius: 30px;
+        }
+
+        #box7 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border-radius: 100px 0 0 0;
+        }
+
+        #box8 {
+            width: 100px;
+            height: 50px;
+            background-color: red;
+            border-radius: 100px 0 100px 0/50px 0 50px 0;
+        }
+
+        #box9 {
+            width: 100px;
+            height: 50px;
+            background-color: red;
+            border-radius: 100px 0 0 0/50px 0 0 0;
+        }
+
+        #box10 {
+            width: 100px;
+            height: 50px;
+            background-color: red;
+            border-radius: 100px 0 0 0/50px 0 0 0;
+        }
+
+        #box11 {
+            width: 50px;
+            height: 100px;
+            background-color: red;
+            border-radius: 50px 0 0 0/100px 0 0 0;
+        }
+
+        #box12 {
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 50px;
+            border-color: green yellow red goldenrod;
+            border-radius: 50px 50px 50px 50px;
+        }
+
+        #box13 {
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 50px;
+            border-color: green transparent red transparent;
+        }
+
+        #box14 {
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 50px;
+            border-color: red transparent transparent transparent;
+        }
+
+        #box15 {
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 50px;
+            border-color: red red green green;
+            border-radius: 50%;
+        }
+
+        #box17 {
+            width: 100px;
+            height: 0;
+            border-style: solid;
+            border-top-width: 50px;
+            border-bottom-width: 50px;
+            border-bottom-color: red;
+            border-top-color: green;
+            border-radius: 50%;
+        }
+
+        #box16 {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            border-radius: 20px;
+            background-color: red;
+        }
+
+        #box16::before {
+            position: absolute;
+            top: 20px;
+            left: -20px;
+            content: "";
+            display: block;
+            width: 0px;
+            height: 0px;
+            border-style: solid;
+            border-width: 10px;
+            border-color: transparent red transparent transparent;
+        }
+
+        #box18 {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            border-radius: 0 0 100px 0;
+            border-width: 50px 0 50px 100px;
+            border-style: solid;
+            border-color: red;
+        }
+        #box19 {
+            position: relative;
+            width: 800px;
+            height: 300px;
+            background-color: red;
+            border-radius: 50px;
+        }
+        #box19::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: -50px;
+            left: 800px;
+            width: 100px;
+            height: 100px;
+            border-radius: 0 0 100px 0;
+            border-width: 0 0 50px 0;
+            border-style: solid;
+            border-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+
+    </div>
+    <div id="box2"></div>
+    <div id="box3"></div>
+    <div id="box4"></div>
+    <div id="box5"></div>
+    <div id="box6"></div>
+    <div id="box7"></div>
+    <div id="box8"></div>
+    <div id="box9"></div>
+    <div id="box10"></div>
+    <div id="box11"></div>
+    <div id="box12"></div>
+    <div id="box13"></div>
+    <div id="box14"></div>
+    <div id="box15"></div>
+    <div id="box16"></div>
+    <div id="box17"></div>
+    <div id="box18"></div>
+    <div id="box19"></div>
+</body>
+
+</html>

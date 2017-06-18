@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>REM布局</title>
+    <style type="text/css">
+        /*流式布局法式按照设计稿的一半设计的，手机320设计稿640，应为苹果手机是2陪高清屏*/
+        /*在HTML中设置font-size: 50px;*/
+
+        html {
+            font-size: 100px;
+            /*1rem = 100px*/
+        }
+
+        .box {
+            margin: 0 0.2rem;
+            /*宽度不写默认值*/
+            height: 2rem;
+            background-color: rebeccapurple;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="main">
+        <div class="box">
+        </div>
+    </section>
+
+    <script type="text/javascript">
+        // 根据设计稿的宽度计算页面的宽度
+        ~ function () {
+            var desW = 640;
+            var winW = document.documentElement.clientWidth;
+            var getMain = document.getElementById('main');
+            // 如果当前图片已经大于设计稿了，为了保证图片的良好展示，让其不再变大了，两边留白显示
+            if (winW > desW) {
+                getMain.style.width = desW + "px";
+                getMain.style.margin = "0 auto";
+                return;
+            }
+            // 方法二：通过检测，用PC端访问移动端页面，通过自动跳转，移动端访问PC端，在自动跳转（通过JS代码实现）
+            
+            var sc = winW / desW;
+            document.documentElement.style.fontSize = sc * 100 + "px";
+        }();
+    </script>
+</body>
+
+</html>
